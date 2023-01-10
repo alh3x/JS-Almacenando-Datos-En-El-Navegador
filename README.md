@@ -41,3 +41,40 @@ Lo que aprendimos en esta aula:
 Guardar las tareas en el navegador utilizando SessionStorage
 Almacenar las tareas con LocalStorage
 Transformar objetos en string utilizando JSON.stringify()
+
+---------------------
+
+Cortocircuito pipe
+PRÓXIMA ACTIVIDAD
+
+Durante el curso utilizamos pipe || para crear una nueva evaluación de cortocircuito( short circuit evaluation).
+
+const tasks = JSON.parse(localStorage.getItem('tasks')) || [ ]COPIA EL CÓDIGO
+Con eso, le decimos a la aplicación que en caso de que localStorage este con datos se comporte de una manera, si en caso contrario estuviera vacío, la constante tasks empezaría como un arreglo vacío. Las expresiones lógicas son evaluadas de izquierda a derecha, luego, si la primera declaración sea verdadera se ejecuta normalmente y la segunda declaración no es aplicada, y si el primer es evaluado como falso, ejecutamos el segundo caso.
+
+true || false // true
+false || true // true
+
+--------------
+
+ Exhibiendo datos del LocalStorage
+PRÓXIMA ACTIVIDAD
+
+En nuestra aplicación ya pudimos guardar los datos que el usuario rellena dentro del localStorage:
+
+const tasksList = JSON.parse(localStorage.getItem('tasks')) || [ ]COPIA EL CÓDIGO
+Tenemos una función llamada createTask() el cual genera la estructura HTML de como los datos serán exhibidos y una constante list que tiene la referencia del elemento donde queremos agregar cada tarea, necesitamos enviarle cada una de las tareas e indicarle donde ponerla, ¿Cómo podemos hacerlo?
+
+tasksList.forEach((task) => {
+        list.appendChild(createTask(task))
+})
+
+Alternativa Correcta. ¡Exacto! LocalStorage se comporta como un arreglo, podemos utilizar métodos de arreglo como el forEachpara iterar sobre los ítems. Después, cada ítem es pasado para el componente Tarea, lo cual será agregado dentro del elemento padre representado por lista.
+
+------------Lo que aprendimos en esta aula:
+
+Recorrer el arreglo con forEach() de las tareas guardadas en LocalStorage
+Utilizar pipe
+Convertir las tareas almacenadas en formato string a objetos con JSON.parse()
+
+
