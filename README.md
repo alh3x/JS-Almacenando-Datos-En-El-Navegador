@@ -78,3 +78,31 @@ Utilizar pipe
 Convertir las tareas almacenadas en formato string a objetos con JSON.parse()
 
 
+----------------
+
+Cambiando el estado de la tarea
+PRÓXIMA ACTIVIDAD
+
+Nuestra próxima tarea es ordenar las fechas del localStorage para que sean exhibidas de la menor fecha para la mayor. Tenemos la función que recibirá la lógica.
+
+export const orderDates = (dates) => { }COPIA EL CÓDIGO
+¿Cuál lógica de ordenación podemos utilizar para concluir esta tarea?
+
+Seleccione una alternativa
+
+dates.sort((a, b) => {
+    const firstDate = moment(a, 'DD/MM/YYYY')
+    const secondDate = moment(b, 'DD/MM/YYYY')
+    return firstDate - secondDate
+})}
+
+Alternativa Correcta. ¡Exacto! Utilizamos el método sort para ordenación.
+
+
+-----------Lo que aprendimos
+PRÓXIMA ACTIVIDAD
+
+Lo que aprendimos en esta aula:
+
+Filtrar elementos de un arreglo
+Ordenar los elementos del LocalStorage
