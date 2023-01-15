@@ -106,3 +106,19 @@ Lo que aprendimos en esta aula:
 
 Filtrar elementos de un arreglo
 Ordenar los elementos del LocalStorage
+
+
+-------------
+
+Cambiando el estado de la tarea
+PRÓXIMA ACTIVIDAD
+
+Cuando la persona que esté utilizando nuestra aplicación al darle click en el botón de concluir, tenemos que cambiar el estado de la variable de falso para verdadero.
+
+¿Cómo podemos cambiar el estado de esta variable?
+
+Seleccione una alternativa
+
+tasks[index]['complete'] = !tasks[index]['complete']
+
+Alternativa Correcta. ¡Exacto! El signo de exclamación ! es un operador de negación, luego, niega el estado que era verdade, transformándolo en falso.
